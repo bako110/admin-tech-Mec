@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { useAuthStore } from '../store/authStore'
 import toast from 'react-hot-toast'
+import { config } from '../config/environment'
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: config.API_URL,
   headers: {
     'Content-Type': 'application/json',
   },
